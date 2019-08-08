@@ -1,0 +1,49 @@
+@import '~antd/lib/style/themes/default.less';
+
+.main {
+  width: 90%;
+  max-width: 368px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  right: 10%;
+  top: 26%;
+
+  .icon {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-left: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    text-align: left;
+    margin-top: 24px;
+    line-height: 22px;
+
+    .register {
+      float: right;
+    }
+  }
+  .title {
+    color: #fff;
+    font-size: 66px;
+    // color: @heading-color;
+    font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    position: relative;
+    // margin-bottom: 20px;
+    top: 2px;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+  }
+}

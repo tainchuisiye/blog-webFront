@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@declare/*": ["./src/declare/*"],
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@common/*": ["./src/common/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@/*": ["./src/*"],
+      "@/assete": ["./src/assete"]
+    },
+    "sourceMap": true,
+    "removeComments": true,
+    "listEmittedFiles": true,
+    "jsx": "react",
+    "locale": "zh_cn",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true
+  }
+}

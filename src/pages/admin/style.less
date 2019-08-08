@@ -1,0 +1,93 @@
+@head_h : 70px;
+// 文件夹
+.folder {
+  .title {
+    font-size: 20px;
+    padding: 10px;
+  }
+  height: 100%;
+  background: #404040;
+  color: #fff;
+  .folderItem,
+  .open {
+    font-size: 16px;
+    padding: 8px 0px 8px 16px;
+    position: relative;
+    cursor: pointer;
+  }
+  .folderItem:hover {
+    // background:#666
+    color: #ec7259;
+  }
+  .open {
+    // color:#ec7259;
+    border-left: 2px solid #ec7259;
+    padding-left: 14px;
+    background: #666;
+  }
+}
+.formSty {
+  margin-left: 20px;
+}
+
+// .scrollBlock {
+//   height: 100%;
+//   overflow: auto;
+// }
+
+// 文章
+
+.articleList {
+  color: #595959;
+  height: 100%;
+  // padding: 20px;
+  .title {
+  }
+
+  .scrollBlock {
+    height: e('calc(100% - 70px)'); //calc(100% - @head_h);
+    overflow: auto;
+  }
+  .articleItme,
+  .open {
+    padding: 20px;
+  }
+
+  .head {
+    font-size: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+  }
+
+  .articleItme {
+    cursor: pointer;
+    border-bottom: 1px solid #e6e6e6;
+    &:hover {
+      background: #e6e6e6;
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .open {
+    // color:#ec7259;
+    border-left: 3px solid #ec7259;
+    // padding-left: 16px;
+    background: #e6e6e6;
+    // margin-left: -1px;
+  }
+
+  .rota180 {
+    animation: rota 5s;
+  }
+
+  @keyframes rota {
+    from {
+      background: red;
+    }
+    to {
+      background: yellow;
+    }
+  }
+}

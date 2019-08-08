@@ -1,0 +1,154 @@
+// @head_h : 70px;
+// // 文件夹
+// .folder {
+//   .title {
+//     font-size: 20px;
+//     padding: 10px;
+//   }
+//   height: 100%;
+//   background: #404040;
+//   color: #fff;
+//   .folderItem,
+//   .open {
+//     font-size: 16px;
+//     padding: 8px 0px 8px 16px;
+//     position: relative;
+//     cursor: pointer;
+//   }
+//   .folderItem:hover {
+//     // background:#666
+//     color: #ec7259;
+//   }
+//   .open {
+//     // color:#ec7259;
+//     border-left: 2px solid #ec7259;
+//     padding-left: 14px;
+//     background: #666;
+//   }
+// }
+// .formSty {
+//   margin-left: 20px;
+// }
+
+// // .scrollBlock {
+// //   height: 100%;
+// //   overflow: auto;
+// // }
+
+// // 文章
+
+// .articleList {
+//   color: #595959;
+//   height: 100%;
+//   // padding: 20px;
+//   .title {
+//   }
+
+//   .scrollBlock {
+//     height: e('calc(100% - 70px)'); //calc(100% - @head_h);
+//     overflow: auto;
+//   }
+//   .articleItme,
+//   .open {
+//     padding: 20px;
+//   }
+
+//   .articleItme {
+//     cursor: pointer;
+//     border-bottom: 1px solid #e6e6e6;
+//     &:hover {
+//       background: #e6e6e6;
+//     }
+//     &:last-child {
+//       border-bottom: 0;
+//     }
+//   }
+
+//   .open {
+//     // color:#ec7259;
+//     border-left: 3px solid #ec7259;
+//     padding-left: 16px;
+//     background: #e6e6e6;
+//     margin-left: -1px;
+//   }
+
+//   .rota180 {
+//     a nimation: rota 5s;
+//   }
+
+//   @keyframes rota {
+//     from {
+//       background: red;
+//     }
+//     to {
+//       background: yellow;
+//     }
+//   }
+// }
+
+.cardStyle {
+  width: 260px;
+  // height: 500px;
+  border-radius: 8px !important;
+  background: '#fff';
+
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 4px 10px rgba(0, 0, 0, 0.06);
+  .cardTag {
+    padding: 5px 0px;
+    border: solid #eee;
+    border-width: 1px 0px 0 0;
+    height: 40px;
+    margin: 10px 0;
+    font-size: 20px;
+    color: #aaa;
+    text-align: center;
+  }
+
+  .iconBtn {
+    cursor: pointer;
+  }
+}
+
+.mateStyle {
+  padding: 10px;
+  .ant-card-meta-title {
+    font-size: 20px !important;
+  }
+  .ant-card-meta-description {
+    text-align: left;
+  }
+}
+
+.menu {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      border-top: 1px solid #eee;
+      position: relative;
+      cursor: pointer;
+      font-size: 16px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      &:hover:extend(.active) {
+        color: #ffffff;
+        background: #44cef6;
+      }
+      // &.active {
+      //   background: #44cef6;
+      //   color: #ffffff;
+      //   text-shadow: none;
+      // }
+    }
+  }
+}
+
+.copyRight {
+  margin-top: 5px;
+  width: 100%;
+  text-align: center;
+  display: inherit;
+}
