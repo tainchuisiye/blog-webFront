@@ -1,6 +1,6 @@
 const path = require('path');
 
-const proxyTarget = 'http://192.168.1.207:3000';
+const proxyTarget = 'http://192.168.1.222:3000';
 
 export default {
   "theme": {//主题

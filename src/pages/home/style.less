@@ -86,69 +86,124 @@
 //   }
 // }
 
-.cardStyle {
-  width: 260px;
-  // height: 500px;
-  border-radius: 8px !important;
-  background: '#fff';
+// .cardStyle {
+//   width: 260px;
+//   // height: 500px;
+//   border-radius: 8px !important;
+//   background: '#fff';
 
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 4px 10px rgba(0, 0, 0, 0.06);
-  .cardTag {
-    padding: 5px 0px;
-    border: solid #eee;
-    border-width: 1px 0px 0 0;
-    height: 40px;
-    margin: 10px 0;
+//   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 4px 10px rgba(0, 0, 0, 0.06);
+//   .cardTag {
+//     padding: 5px 0px;
+//     border: solid #eee;
+//     border-width: 1px 0px 0 0;
+//     height: 40px;
+//     margin: 10px 0;
+//     font-size: 20px;
+//     color: #aaa;
+//     text-align: center;
+//   }
+
+//   .iconBtn {
+//     cursor: pointer;
+//   }
+// }
+
+// .mateStyle {
+//   padding: 10px;
+//   .ant-card-meta-title {
+//     font-size: 20px !important;
+//   }
+//   .ant-card-meta-description {
+//     text-align: left;
+//   }
+// }
+
+// .menu {
+//   ul {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+
+//     li {
+//       border-top: 1px solid #eee;
+//       position: relative;
+//       cursor: pointer;
+//       font-size: 16px;
+//       height: 40px;
+//       text-align: center;
+//       line-height: 40px;
+//       &:hover:extend(.active) {
+//         color: #ffffff;
+//         background: #44cef6;
+//       }
+//       // &.active {
+//       //   background: #44cef6;
+//       //   color: #ffffff;
+//       //   text-shadow: none;
+//       // }
+//     }
+//   }
+// }
+
+// .copyRight {
+//   margin-top: 5px;
+//   width: 100%;
+//   text-align: center;
+//   display: inherit;
+// }
+
+.artBox {
+  // height: 130px;
+  border-bottom: 1px solid #eee;
+  margin: 10px 0;
+  padding: 20px 20px 30px;
+  font-size: 12px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 1px 2px 30px rgba(0, 1, 1, 0.3);
+    transition: all 0.17s ease-in;
+  }
+
+  .boxHead {
+    height: 34px;
+  }
+  .title {
     font-size: 20px;
-    color: #aaa;
-    text-align: center;
+    font-weight: bold;
+    line-height: 26px;
+    margin-left: 20px;
   }
-
-  .iconBtn {
-    cursor: pointer;
-  }
-}
-
-.mateStyle {
-  padding: 10px;
-  .ant-card-meta-title {
-    font-size: 20px !important;
-  }
-  .ant-card-meta-description {
-    text-align: left;
-  }
-}
-
-.menu {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    li {
-      border-top: 1px solid #eee;
+  .tags {
+    font-size: 12px;
+    height: 30px;
+    position: relative;
+    top: 22px;
+    span {
+      // float: right;
+    }
+    .icon {
+      font-size: 22px;
       position: relative;
-      cursor: pointer;
-      font-size: 16px;
-      height: 40px;
-      text-align: center;
-      line-height: 40px;
-      &:hover:extend(.active) {
-        color: #ffffff;
-        background: #44cef6;
-      }
-      // &.active {
-      //   background: #44cef6;
-      //   color: #ffffff;
-      //   text-shadow: none;
-      // }
+      margin-right: 10px;
+      top: 2px;
     }
   }
+  .timer {
+    font-size: 14px;
+    float: left;
+  }
+
+  .desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
 }
 
-.copyRight {
-  margin-top: 5px;
-  width: 100%;
-  text-align: center;
-  display: inherit;
+.header {
+  font-size: 24px;
+  border-bottom: 2px solid #eee;
+  padding-left: 10px;
 }

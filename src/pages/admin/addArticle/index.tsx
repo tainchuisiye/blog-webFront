@@ -122,8 +122,8 @@ export default class UpdateArticle extends Component<BaseProps, any> {
   }
 
   getFolderItme = data => {
-    if (data.lenght === 0) {
-      return '';
+    if (data.length === 0) {
+      return;
     }
     return data.map((val, index) => {
       let isCheckedIcon = 'folder';
@@ -176,7 +176,7 @@ export default class UpdateArticle extends Component<BaseProps, any> {
       <div className={styles.articleList}>
         {_header}
         <div className={styles.scrollBlock}>
-          {data.lenght !== 0 &&
+          {Array.isArray(data) ?
             data.map((val, index) => {
               const { id, title, modifyTime } = val;
 
@@ -198,7 +198,7 @@ export default class UpdateArticle extends Component<BaseProps, any> {
                   </span>
                 </div>
               );
-            })}
+            }) : ''}
         </div>
       </div>
     );

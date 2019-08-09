@@ -5,6 +5,7 @@ import { Card, Table, Divider, Button, Tag, message, Popconfirm, Row, Col } from
 import WelcomeService from './service';
 import router from 'umi/router';
 import Markdown from 'react-remarkable';
+import MyMarkdown from '@components/MyMarkdown';
 
 interface Props extends BaseProps {
   id: Number;
@@ -37,7 +38,8 @@ export default class Welcome extends Component<BaseProps, any> {
           <Row>
             <Col lg={6}>菜单</Col>
             <Col lg={12}>
-              <Markdown source={str} />
+              {/* <Markdown source={str} /> */}
+              <MyMarkdown source={str} />
             </Col>
             <Col lg={6}>
               评论
