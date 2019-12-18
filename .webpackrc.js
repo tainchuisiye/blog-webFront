@@ -1,6 +1,6 @@
 const path = require('path');
 
-const proxyTarget = 'http://192.168.1.222:3000';
+const proxyTarget = 'http://127.0.0.1:3000';
 
 export default {
   "theme": {//主题
@@ -14,7 +14,8 @@ export default {
     "@utils": path.resolve('./src/utils'),
     "@common": path.resolve('./src/common'),
     "@layouts": path.resolve('./src/layouts'),
-    "@declare": path.resolve('./src/declare')
+    "@declare": path.resolve('./src/declare'),
+    "@assets": path.resolve('./src/assets')
   },
   externals: {
     "BMap": "BMap"

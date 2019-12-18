@@ -6,7 +6,7 @@ import router from 'umi/router';
 import Markdown from 'react-remarkable';
 import { enquireScreen } from 'enquire-js';
 import styles from './style.less';
-import cardImg from '../../assete/images/card.jpeg';
+import cardImg from '@assets/images/card.jpeg';
 
 import { connect } from 'dva';
 const { Meta } = Card;

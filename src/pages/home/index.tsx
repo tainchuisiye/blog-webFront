@@ -1,9 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import BaseProps from '../../declare/baseProps';
 // import PageHeaderLayout from '../../layouts/PageHeaderLayout';
-import {
-  Card, Tag, Icon
-} from 'antd';
+import { Card, Tag, Icon } from 'antd';
 import WelcomeService from './service';
 import router from 'umi/router';
 import SimpleMDEEditor from 'yt-simplemde-editor';
@@ -40,32 +38,50 @@ export default class Welcome extends Component<BaseProps, any> {
     this.setState({ dataSource });
   }
 
+  toReadArticle(id) {
+    router.push({ pathname: 'article', query: { id } });
+  }
+
   artCard() {
     const { dataSource } = this.state;
-    if (!Array.isArray(dataSource)) { return; }
-    return dataSource.map(({ title, id, content, keyword, createTime, modifyTime, desc }) => {
-      return (
-        <div key={id} className={styles.artBox}>
-          <div className={styles.boxHead}>
-            <span className={styles.title}>{title}</span>
-            <span className={styles.timer}>
-              <b>Time：</b>{modifyTime ? `${moment(modifyTime).format(dateFormat)}` : null}
-            </span>
+    if (!Array.isArray(dataSource)) {
+      return;
+    }
+    return dataSource.map(
+      ({ title, id, content, keyword, createTime, modifyTime, desc }) => {
+        return (
+          <div
+            key={id}
+            className={styles.artBox}
+            onClick={() => {
+              this.toReadArticle(id);
+            }}
+          >
+            <div className={styles.boxHead}>
+              <span className={styles.title}>{title}</span>
+              <span className={styles.timer}>
+                <b>Time：</b>
+                {modifyTime ? `${moment(modifyTime).format(dateFormat)}` : null}
+              </span>
+            </div>
+            <div className={styles.desc}>
+              {/* {content} */}
+              <MyMarkdown source={content} />
+            </div>
+            {keyword ? (
+              <div className={styles.tags}>
+                {
+                  <span>
+                    <Icon type="tag" className={styles.icon} />{' '}
+                    <Tag color="blue">{keyword}</Tag>
+                  </span>
+                }
+              </div>
+            ) : null}
           </div>
-          <div className={styles.desc}>
-            {content}
-            {/* <MyMarkdown source={content} /> */}
-          </div>
-          {keyword ?
-            <div className={styles.tags}>
-              {<span ><Icon type="tag" className={styles.icon} /> <Tag color="blue">{keyword}</Tag></span>}
-            </div> : null
-          }
-
-        </div>
-      );
-    });
-
+        );
+      }
+    );
   }
 
   render() {
@@ -78,8 +94,7 @@ export default class Welcome extends Component<BaseProps, any> {
             {this.artCard()}
           </div>
         </div>
-
-      </Fragment >
+      </Fragment>
     );
   }
 }

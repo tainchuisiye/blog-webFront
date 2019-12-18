@@ -74,7 +74,7 @@ export default class UpdateArticle extends Component<BaseProps, any> {
     const { id } = this.state.checkedArticle;
     const content = localStorage.getItem('smde_article_content');
     // tslint:disable-next-line:no-console
-    console.log('{ content, ...params, id }', { content, ...params, id });
+    console.log({ content, ...params, id });
     const result = await ArticleService.updateArticle({ content, ...params, id });
     // tslint:disable-next-line:no-console
     // console.log(result);
